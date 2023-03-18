@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<body style="background-color:#00ffd527;">
+	</body>
+	<body>
+
+<title>KOB</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	
+       	
+	$(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+ </head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/LogoKob.jpeg" width="70" height="60"alt=""/></a>
+						
+					 </div>
+					 <div class="menu">
+						<a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						  <ul class="nav" id="nav">
+							  <li><a href="index.html">Bienvenidos</a></li>
+							  <li><a href="login.html">Inicio de Sesion</a></li>
+							  <li><a href="register.html">Registro</a></li>
+							  <li><a href="shop.html">Tienda</a></li>
+							  <li><a href="contact.html">Apoyo cliente</a></li>>
+						  </ul>
+						  <script type="text/javascript" src="js/responsive-nav.js"></script>
+				  </div>						
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				   <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Buscar" type="search" name="vamos" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+			
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row team_box">
+				<h3 class="m_2"></h3>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/team2.jpg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>¿Quiénes somos?</h2>
+						 <p>Somo un grupo de ingenieros con el fin de hacer esta página web dinámica, de compra/venta donde se puede adquirir u ofrecer artículos de segunda mano como inmuebles, aparatos electrónicos, videojuegos, celulares, computadoras, vehículos, etc. ¡Qué te diviertas!.</p>
+					   </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/team1.jpg" class="img-responsive" title="continue" alt=""/></a>
+					  <div id="small-dialog3" class="mfp-hide">
+						 <div class="pop_up2">
+							  <h2>Funciones </h2>
+						   <p>-	El sistema solo podrá ser utilizado en el departamento de cómputo KOB ya que el tanto análisis como diseño corresponde a este.</p>
+						   <p>-	La velocidad de transferencia de los datos dependerá de la velocidad conexión a Internet, que no tenga embotellamientos y dado el caso que no haya conexión a Internet se suspenderá el uso del sistema.</p>
+						   <p>-	El sistema solo podrá ser utilizado por personal correspondiente al departamento esto con la finalidad de evitar malos usos</p>
+						 </div>
+					  </div>
+				  </div>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/team3.jpg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>Características: </h2>
+						 <p>Los usuarios deberán registrarse en el sistema para así obtener una mejor experiencia.</p>
+						 <p>Al registrarse, el usuario debe proporcionará sus datos como: Nombre, Apellido, E-mail,  Usuario, Password, Fecha de nacimiento y Número telefónico </p>
+						 <p>El sistema ofrecerá al usuario información general acerca de las categorías de los productos que se ofrecen.</p>
+						 <p>El sistema ofrecerá una lista de las categorías como de casa y jardín, entretenimiento, electrónica, entre otros.</p>
+                         <p>Todo esto con el bjetivo que sea atractiva y cuente con diferentes secciones para que los usuarios puedan encontrar el artículo deseado con rapidez, manteniendo el orden y el respeto entre los usuarios</p>
+					   </div>
+					</div>
+				
+				</div>
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/team4.jpg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>Conclusión</h2>
+						 <p>La interfaz consistirá en un conjunto de ventanas con botones, listas y campos de textos. Ésta deberá ser construida específicamente para el sistema propuesto y, será visualizada desde un navegador de internet.</p>
+						 
+					   </div>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h3>Categorías</h3>
+                        <UL>
+                            <li>Eléctricos</li>
+                            <li>Ropa</li>
+                            <li>Tecnología</li>
+                            <li>Oficina</li> 
+                            <li>Mobiliario </li>
+                            <li>Cocina</li>
+                            <li>Herramientas</li>
+                            <li>Entre otros</li>
+                        </UL>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h3>Atencion al cliente</h3>
+                        <p><a href="mailto:Kobsegundamano@gmail.com">Kobsegundamano@gmail.com</a></p>
+
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h3>Quejas y/o sugerencias</h3>
+						<div class="footer_search">
+						   <form>
+							<input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+							<input type="submit" value="vamos">
+						   </form>
+						</div>
+						<ul class="social">	
+						  <li class="facebook"><a href="#"><span> </span></a></li>
+						  <li class="twitter"><a href="#"><span> </span></a></li>
+						  <li class="instagram"><a href="#"><span> </span></a></li>	
+																			  
+						</ul>
+					   </ul>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+				 
+					 </dd>
+					 </dl>
+			   </div>
+		</div>
+	</div>
+</body>	
+</html>
